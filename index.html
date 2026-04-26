@@ -3,239 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoCrime Bureau | Government Crypto Crime Recovery Agency</title>
-    <meta name="description" content="Official government agency helping victims recover stolen cryptocurrency. Report crypto hacks, investment scams, and blockchain crimes. Get professional investigation support.">
-    <meta name="keywords" content="crypto crime, cryptocurrency scam, crypto recovery, blockchain investigation, stolen crypto, crypto hack, government agency, FBI crypto, crypto fraud">
-    <meta name="author" content="CryptoCrime Bureau - Government Agency">
-    <meta property="og:title" content="CryptoCrime Bureau | Government Crypto Crime Recovery">
-    <meta property="og:description" content="Official government agency helping victims recover stolen cryptocurrency.">
-    <meta property="og:type" content="government">
+    <title>CryptoCrimeRecovery.gov | Official Crypto Crime Victim Assistance</title>
+    <meta name="description" content="Official government agency providing solutions for cryptocurrency scam victims, hacked wallets, and stolen crypto recovery assistance.">
+    <meta name="keywords" content="crypto scam, cryptocurrency hack, stolen crypto, crypto recovery, government agency, scam victim, blockchain forensics, crypto crime, FBI crypto, crypto investigation">
+    <meta name="author" content="CryptoCrimeRecovery.gov - Official Government Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="CryptoCrimeRecovery.gov | Official Crypto Crime Victim Assistance">
+    <meta property="og:description" content="Official government agency providing solutions for cryptocurrency scam victims. Report hacks, scams, and stolen crypto.">
+    <meta property="og:type" content="government:website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-blue: #003366;
-            --secondary-blue: #004080;
-            --accent-gold: #D4AF37;
-            --accent-gold-light: #F4D03F;
-            --dark-navy: #0A1628;
-            --light-gray: #F5F7FA;
-            --text-dark: #1A1A2E;
-            --text-light: #FFFFFF;
-            --text-muted: #6B7280;
-            --success-green: #059669;
-            --warning-red: #DC2626;
-            --border-color: #E5E7EB;
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
-        }
+        :root { --gov-blue: #003366; --gov-blue-dark: #002244; --gov-blue-light: #004488; --gov-gold: #C9A227; --gov-gold-light: #D4B84A; --gov-red: #B22234; --gov-green: #2E5233; --gov-cream: #F5F5DC; --primary: var(--gov-blue); --secondary: var(--gov-gold); --accent: var(--gov-blue-light); --success: var(--gov-green); --danger: var(--gov-red); --dark: #1a1a1a; --light: #f8f9fa; --gray: #6c757d; --gray-light: #e9ecef; --font-heading: 'Merriweather', Georgia, serif; --font-body: 'Source Sans Pro', -apple-system, sans-serif; --font-mono: 'Roboto Mono', monospace; --space-xs: 0.25rem; --space-sm: 0.5rem; --space-md: 1rem; --space-lg: 2rem; --space-xl: 3rem; --space-2xl: 5rem; --shadow-sm: 0 2px 4px rgba(0,0,0,0.1); --shadow-md: 0 4px 12px rgba(0,0,0,0.15); --shadow-lg: 0 8px 24px rgba(0,0,0,0.2); --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; }
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Roboto', sans-serif; background: var(--light-gray); color: var(--text-dark); line-height: 1.6; }
-        .gov-banner { background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue)); color: white; padding: 8px 0; font-size: 0.85rem; text-align: center; font-weight: 500; }
-        .gov-banner .seal { display: inline-block; margin-right: 10px; font-size: 1.2rem; }
-        header { background: white; box-shadow: var(--shadow-md); position: sticky; top: 0; z-index: 1000; }
-        .header-content { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo-section { display: flex; align-items: center; gap: 1rem; }
-        .logo-icon { width: 60px; height: 60px; background: var(--primary-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
-        .logo-text h1 { font-size: 1.5rem; font-weight: 900; color: var(--primary-blue); letter-spacing: -0.5px; }
-        .logo-text p { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
-        .header-actions { display: flex; gap: 1rem; align-items: center; }
-        .emergency-line { display: flex; align-items: center; gap: 0.5rem; color: var(--warning-red); font-weight: 600; }
-        .emergency-line span { font-size: 1.5rem; }
-        nav { background: var(--primary-blue); padding: 0; }
-        nav ul { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; list-style: none; gap: 0; }
-        nav a { display: block; padding: 1rem 1.5rem; color: white; text-decoration: none; font-weight: 500; transition: 0.2s; border-bottom: 3px solid transparent; }
-        nav a:hover, nav a.active { background: rgba(255,255,255,0.1); border-bottom-color: var(--accent-gold); }
-        .hero { background: linear-gradient(135deg, var(--dark-navy) 0%, var(--primary-blue) 100%); color: white; padding: 5rem 2rem; text-align: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-        .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--accent-gold); padding: 0.5rem 1.5rem; border-radius: 9999px; color: var(--accent-gold-light); margin-bottom: 2rem; font-weight: 600; }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1.5rem; line-height: 1.1; }
-        .hero p { font-size: 1.25rem; color: rgba(255,255,255,0.85); margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-family: inherit; font-size: 1rem; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; transition: 0.3s; text-decoration: none; }
-        .btn-primary { background: var(--accent-gold); color: var(--dark-navy); }
-        .btn-primary:hover { background: var(--accent-gold-light); transform: translateY(-2px); box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4); }
-        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
-        .btn-secondary:hover { background: white; color: var(--primary-blue); }
-        .btn-outline { background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); }
-        .btn-outline:hover { background: var(--primary-blue); color: white; }
-        .stats-section { background: white; padding: 3rem 2rem; border-bottom: 1px solid var(--border-color); }
-        .stats-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; }
-        .stat-item { padding: 1rem; }
-        .stat-number { font-size: 2.5rem; font-weight: 900; color: var(--primary-blue); font-family: 'Roboto Mono', monospace; }
-        .stat-label { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; }
-        .services { padding: 5rem 2rem; max-width: 1400px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 3rem; }
-        .section-header h2 { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 1rem; }
-        .section-header p { color: var(--text-muted); max-width: 600px; margin: 0 auto; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .service-card { background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-md); transition: 0.3s; border-top: 4px solid var(--primary-blue); }
-        .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .service-icon { width: 60px; height: 60px; background: rgba(0, 51, 102, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.5rem; }
-        .service-card h3 { font-size: 1.3rem; color: var(--primary-blue); margin-bottom: 1rem; }
-        .service-card p { color: var(--text-muted); margin-bottom: 1.5rem; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); background: var(--light); color: var(--dark); line-height: 1.7; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.3; color: var(--gov-blue-dark); }
+        h1 { font-size: clamp(2rem, 5vw, 3rem); }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+        p { margin-bottom: 1rem; }
+        a { color: var(--gov-blue); text-decoration: none; transition: 0.2s; }
+        a:hover { color: var(--gov-blue-light); text-decoration: underline; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-md); }
+        .text-center { text-align: center; }
+        .text-gold { color: var(--gov-gold); }
+        .text-red { color: var(--gov-red); }
+        .text-green { color: var(--gov-green); }
+        .gov-header { background: var(--gov-blue); color: white; padding: var(--space-sm) 0; font-size: 0.85rem; }
+        .gov-header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm); }
+        .gov-header a { color: white; opacity: 0.9; }
+        .gov-header a:hover { opacity: 1; text-decoration: underline; }
+        .header-main { background: white; border-bottom: 4px solid var(--gov-gold); padding: var(--space-md) 0; box-shadow: var(--shadow-md); position: sticky; top: 0; z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; gap: var(--space-lg); flex-wrap: wrap; }
+        .logo-section { display: flex; align-items: center; gap: var(--space-md); }
+        .gov-seal { width: 80px; height: 80px; background: var(--gov-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; border: 3px solid var(--gov-gold); box-shadow: var(--shadow-md); }
+        .logo-text h1 { font-size: 1.5rem; color: var(--gov-blue-dark); margin-bottom: 2px; }
+        .logo-text .tagline { font-size: 0.8rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
+        .header-actions { display: flex; gap: var(--space-md); align-items: center; flex-wrap: wrap; }
+        .emergency-line { display: flex; align-items: center; gap: var(--space-sm); padding: var(--space-sm) var(--space-md); background: var(--gov-red); color: white; border-radius: var(--radius-sm); font-weight: 600; }
+        nav { background: var(--gov-blue-dark); padding: 0; }
+        nav ul { display: flex; list-style: none; gap: 0; max-width: 1200px; margin: 0 auto; padding: 0 var(--space-md); flex-wrap: wrap; }
+        nav li { margin: 0; }
+        nav a { display: block; padding: var(--space-md) var(--space-lg); color: white; font-weight: 600; text-decoration: none; border-bottom: 3px solid transparent; transition: 0.2s; }
+        nav a:hover { background: rgba(255,255,255,0.1); text-decoration: none; border-bottom-color: var(--gov-gold); }
+        nav a.active { border-bottom-color: var(--gov-gold); background: rgba(255,255,255,0.05); }
+        .hero { background: linear-gradient(135deg, var(--gov-blue) 0%, var(--gov-blue-dark) 100%); color: white; padding: var(--space-2xl) 0; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.5; }
+        .hero-content { position: relative; z-index: 1; text-align: center; max-width: 800px; margin: 0 auto; }
+        .hero-badge { display: inline-flex; align-items: center; gap: var(--space-sm); background: rgba(201, 162, 39, 0.2); border: 1px solid var(--gov-gold); padding: var(--space-sm) var(--space-md); border-radius: 9999px; color: var(--gov-gold); font-weight: 600; margin-bottom: var(--space-lg); }
+        .hero h1 { color: white; margin-bottom: var(--space-md); font-size: clamp(2rem, 6vw, 3.5rem); }
+        .hero p { font-size: 1.25rem; opacity: 0.9; margin-bottom: var(--space-xl); }
+        .hero-stats { display: flex; justify-content: center; gap: var(--space-2xl); margin-top: var(--space-xl); flex-wrap: wrap; }
+        .hero-stat { text-align: center; }
+        .hero-stat-number { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; color: var(--gov-gold); }
+        .hero-stat-label { font-size: 0.9rem; opacity: 0.8; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-sm); padding: var(--space-md) var(--space-lg); font-family: var(--font-body); font-size: 1rem; font-weight: 600; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: 0.2s; text-decoration: none; }
+        .btn-primary { background: var(--gov-gold); color: var(--gov-blue-dark); }
+        .btn-primary:hover { background: var(--gov-gold-light); transform: translateY(-2px); box-shadow: var(--shadow-md); text-decoration: none; }
+        .btn-secondary { background: white; color: var(--gov-blue); border: 2px solid var(--gov-blue); }
+        .btn-secondary:hover { background: var(--gov-blue); color: white; text-decoration: none; }
+        .btn-danger { background: var(--gov-red); color: white; }
+        .btn-danger:hover { background: #9a1d2b; transform: translateY(-2px); }
+        .btn-lg { padding: var(--space-md) var(--space-xl); font-size: 1.1rem; }
+        .services { padding: var(--space-2xl) 0; background: white; }
+        .section-header { text-align: center; margin-bottom: var(--space-xl); }
+        .section-header h2 { margin-bottom: var(--space-sm); }
+        .section-header p { color: var(--gray); max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg); }
+        .service-card { background: var(--light); border: 1px solid var(--gray-light); border-radius: var(--radius-md); padding: var(--space-xl); transition: 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--gov-blue); }
+        .service-icon { width: 70px; height: 70px; background: var(--gov-blue); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: var(--space-md); }
+        .service-card h3 { margin-bottom: var(--space-sm); color: var(--gov-blue-dark); }
+        .service-card p { color: var(--gray); margin-bottom: var(--space-md); }
         .service-card ul { list-style: none; padding: 0; }
-        .service-card li { padding: 0.5rem 0; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem; }
-        .service-card li::before { content: '✓'; color: var(--success-green); font-weight: bold; }
-        .report-section { background: linear-gradient(180deg, var(--light-gray) 0%, white 100%); padding: 5rem 2rem; }
-        .report-container { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: var(--shadow-lg); overflow: hidden; }
-        .report-header { background: var(--primary-blue); color: white; padding: 2rem; text-align: center; }
-        .report-header h2 { margin-bottom: 0.5rem; }
-        .report-header p { opacity: 0.9; }
-        .report-form { padding: 2.5rem; }
-        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem; }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-dark); }
-        .form-group label .required { color: var(--warning-red); }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 1rem; transition: 0.2s; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-blue); box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1); }
+        .service-card li { padding: var(--space-xs) 0; color: var(--dark); display: flex; align-items: center; gap: var(--space-sm); }
+        .service-card li::before { content: '✓'; color: var(--gov-green); font-weight: bold; }
+        .report-section { padding: var(--space-2xl) 0; background: linear-gradient(180deg, var(--light) 0%, var(--gray-light) 100%); }
+        .report-box { background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); overflow: hidden; }
+        .report-header { background: var(--gov-blue); color: white; padding: var(--space-xl); text-align: center; }
+        .report-header h2 { color: white; margin-bottom: var(--space-sm); }
+        .report-header p { opacity: 0.9; margin: 0; }
+        .report-form { padding: var(--space-xl); }
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg); }
+        .form-group { margin-bottom: var(--space-md); }
+        .form-group.full-width { grid-column: 1 / -1; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: var(--space-xs); color: var(--gov-blue-dark); }
+        .form-group label .required { color: var(--gov-red); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: var(--space-md); border: 1px solid var(--gray-light); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 1rem; transition: 0.2s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--gov-blue); box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1); }
         .form-group textarea { min-height: 150px; resize: vertical; }
-        .alert-banner { background: #FEF3C7; border-left: 4px solid var(--accent-gold); padding: 1.5rem 2rem; margin: 2rem 0; border-radius: 0 8px 8px 0; }
-        .alert-banner h4 { color: #92400E; margin-bottom: 0.5rem; }
-        .alert-banner p { color: #78350F; margin: 0; }
-        .process-section { background: var(--dark-navy); color: white; padding: 5rem 2rem; }
-        .process-section h2 { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
-        .process-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .process-step { text-align: center; padding: 2rem; }
-        .step-number { width: 60px; height: 60px; background: var(--accent-gold); color: var(--dark-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 900; margin: 0 auto 1.5rem; }
-        .process-step h3 { margin-bottom: 1rem; }
-        .process-step p { color: rgba(255,255,255,0.7); }
-        .resources { padding: 5rem 2rem; max-width: 1400px; margin: 0 auto; }
-        .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .resource-card { background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); }
-        .resource-card h3 { display: flex; align-items: center; gap: 0.75rem; color: var(--primary-blue); margin-bottom: 1rem; }
-        .resource-card ul { list-style: none; }
-        .resource-card li { padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); }
-        .resource-card li:last-child { border-bottom: none; }
-        .resource-card a { color: var(--text-dark); text-decoration: none; display: flex; justify-content: space-between; align-items: center; }
-        .resource-card a:hover { color: var(--primary-blue); }
-        .resource-card a::after { content: '→'; }
-        footer { background: var(--dark-navy); color: white; padding: 4rem 2rem 2rem; }
-        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
-        footer h4 { color: var(--accent-gold); margin-bottom: 1.5rem; font-size: 1.1rem; }
-        footer a { color: rgba(255,255,255,0.7); text-decoration: none; display: block; padding: 0.5rem 0; transition: 0.2s; }
-        footer a:hover { color: white; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem; }
-        .footer-seal { font-size: 3rem; margin-bottom: 1rem; }
-        @media (max-width: 768px) { .header-content { flex-wrap: wrap; } .hero h1 { font-size: 2rem; } .stats-grid { grid-template-columns: 1fr 1fr; } .form-grid { grid-template-columns: 1fr; } }
+        .form-help { font-size: 0.85rem; color: var(--gray); margin-top: var(--space-xs); }
+        .form-submit { text-align: center; margin-top: var(--space-lg); }
+        .alert { padding: var(--space-md) var(--space-lg); border-radius: var(--radius-sm); margin-bottom: var(--space-lg); display: flex; align-items: flex-start; gap: var(--space-md); }
+        .alert-icon { font-size: 1.5rem; }
+        .alert-content h4 { margin-bottom: var(--space-xs); }
+        .alert-content p { margin: 0; font-size: 0.95rem; }
+        .alert-warning { background: #fff3cd; border: 1px solid #ffc107; color: #856404; }
+        .alert-danger { background: #f8d7da; border: 1px solid var(--gov-red); color: var(--gov-red); }
+        .alert-info { background: #d1ecf1; border: 1px solid #17a2b8; color: #0c5460; }
+        .alert-success { background: #d4edda; border: 1px solid var(--gov-green); color: var(--gov-green); }
+        .process { padding: var(--space-2xl) 0; background: white; }
+        .steps { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-lg); margin-top: var(--space-xl); }
+        .step { flex: 1; min-width: 250px; max-width: 300px; text-align: center; position: relative; }
+        .step-number { width: 60px; height: 60px; background: var(--gov-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; font-family: var(--font-heading); margin: 0 auto var(--space-md); border: 4px solid var(--gov-gold); }
+        .step h3 { margin-bottom: var(--space-sm); font-size: 1.2rem; }
+        .step p { color: var(--gray); font-size: 0.95rem; margin: 0; }
+        .resources { padding: var(--space-2xl) 0; background: var(--gray-light); }
+        .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg); }
+        .resource-card { background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: 0.3s; }
+        .resource-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .resource-image { height: 150px; background: var(--gov-blue); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .resource-content { padding: var(--space-lg); }
+        .resource-tag { display: inline-block; padding: 2px 10px; background: var(--gov-gold); color: var(--gov-blue-dark); font-size: 0.75rem; font-weight: 600; border-radius: 9999px; text-transform: uppercase; margin-bottom: var(--space-sm); }
+        .resource-card h3 { font-size: 1.1rem; margin-bottom: var(--space-sm); }
+        .resource-card p { color: var(--gray); font-size: 0.9rem; margin-bottom: var(--space-md); }
+        .statistics { padding: var(--space-2xl) 0; background: var(--gov-blue); color: white; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl); text-align: center; }
+        .stat-item { padding: var(--space-lg); }
+        .stat-number { font-family: var(--font-heading); font-size: 3rem; font-weight: 900; color: var(--gov-gold); margin-bottom: var(--space-sm); }
+        .stat-label { font-size: 1rem; opacity: 0.9; }
+        .contact { padding: var(--space-2xl) 0; background: white; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); }
+        .contact-card { text-align: center; padding: var(--space-xl); background: var(--light); border-radius: var(--radius-md); }
+        .contact-icon { font-size: 3rem; margin-bottom: var(--space-md); }
+        .contact-card h3 { margin-bottom: var(--space-sm); }
+        .contact-card p { color: var(--gray); margin: 0; }
+        .contact-card a { color: var(--gov-blue); font-weight: 600; }
+        footer { background: var(--gov-blue-dark); color: white; padding: var(--space-2xl) 0 var(--space-lg); }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-xl); }
+        .footer-col h4 { color: var(--gov-gold); margin-bottom: var(--space-md); font-size: 1.1rem; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.8); padding: var(--space-xs) 0; font-size: 0.95rem; }
+        .footer-col a:hover { color: var(--gov-gold); text-decoration: none; }
+        .footer-col p { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+        .footer-bottom { text-align: center; padding-top: var(--space-lg); border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-bottom p { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin: var(--space-xs) 0; }
+        .official-badge { display: inline-flex; align-items: center; gap: var(--space-sm); background: rgba(201, 162, 39, 0.2); border: 1px solid var(--gov-gold); padding: var(--space-sm) var(--space-md); border-radius: var(--radius-sm); color: var(--gov-gold); font-size: 0.85rem; margin-top: var(--space-md); }
+        @media (max-width: 768px) { .header-content { flex-direction: column; text-align: center; } .logo-section { flex-direction: column; } .header-actions { flex-direction: column; width: 100%; } nav ul { flex-direction: column; } nav a { padding: var(--space-md); text-align: center; } .hero-stats { gap: var(--space-lg); } .steps { flex-direction: column; align-items: center; } .step { max-width: 100%; } }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+        :focus-visible { outline: 3px solid var(--gov-gold); outline-offset: 2px; }
     </style>
 </head>
 <body>
-    <div class="gov-banner"><span class="seal">🏛️</span> OFFICIAL GOVERNMENT AGENCY | CryptoCrime Bureau | Department of Financial Crimes</div>
-    <header>
-        <div class="header-content">
+    <div class="gov-header">
+        <div class="container gov-header-content">
+            <div><span>🇺🇸 United States Government</span> | <span>Official Agency</span></div>
+            <div><a href="#">Español</a> | <a href="#">Accessibility</a> | <a href="#">FOIA</a> | <a href="#">Contact Us</a></div>
+        </div>
+    </div>
+    <header class="header-main">
+        <div class="container header-content">
             <div class="logo-section">
-                <div class="logo-icon">🏛️</div>
-                <div class="logo-text"><h1>CryptoCrime Bureau</h1><p>National Crypto Crime Recovery Agency</p></div>
+                <div class="gov-seal" role="img" aria-label="Government Seal">🏛️</div>
+                <div class="logo-text"><h1>CryptoCrimeRecovery.gov</h1><div class="tagline">Bureau of Cryptocurrency Crime Investigation</div></div>
             </div>
             <div class="header-actions">
-                <div class="emergency-line"><span>📞</span><div><div style="font-size: 0.75rem; color: var(--text-muted);">Emergency Line</div><div>1-800-CRYPTO-HELP</div></div></div>
-                <button class="btn btn-outline" onclick="location.href='#report'">Report Crime</button>
+                <div class="emergency-line"><span>🆘</span><span>24/7 Emergency Line: 1-800-CRYPTO-HELP</span></div>
+                <a href="#report" class="btn btn-primary">Report a Crime</a>
             </div>
         </div>
     </header>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <ul>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#report">Report Crime</a></li>
-            <li><a href="#process">How It Works</a></li>
             <li><a href="#resources">Resources</a></li>
+            <li><a href="#tracking">Track Case</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-badge"><span>🔒</span> Official Government Agency</div>
+        <div class="container hero-content">
+            <div class="hero-badge"><span>🏛️</span><span>Official Government Agency</span></div>
             <h1>Recover Your Stolen Cryptocurrency</h1>
-            <p>The CryptoCrime Bureau is the official government agency dedicated to helping victims of cryptocurrency hacks, investment scams, and blockchain crimes recover their assets.</p>
-            <div class="hero-buttons">
-                <a href="#report" class="btn btn-primary"><span>📋</span> Report a Crime</a>
-                <a href="#services" class="btn btn-secondary"><span>ℹ️</span> Our Services</a>
+            <p>We are the federal agency dedicated to helping victims of cryptocurrency scams, hacks, and theft. Our team of blockchain forensic experts works around the clock to track, freeze, and recover stolen digital assets.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                <a href="#report" class="btn btn-primary btn-lg">Report Crypto Crime</a>
+                <a href="#services" class="btn btn-secondary btn-lg">Our Services</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><div class="hero-stat-number">$4.2B+</div><div class="hero-stat-label">Recovered for Victims</div></div>
+                <div class="hero-stat"><div class="hero-stat-number">15,000+</div><div class="hero-stat-label">Cases Resolved</div></div>
+                <div class="hero-stat"><div class="hero-stat-number">89%</div><div class="hero-stat-label">Success Rate</div></div>
             </div>
         </div>
     </section>
-    <div class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-item"><div class="stat-number">$4.2B+</div><div class="stat-label">Cryptocurrency Recovered</div></div>
-            <div class="stat-item"><div class="stat-number">12,500+</div><div class="stat-label">Cases Resolved</div></div>
-            <div class="stat-item"><div class="stat-number">89%</div><div class="stat-label">Recovery Success Rate</div></div>
-            <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Emergency Response</div></div>
-        </div>
+    <div class="container" style="margin-top: -2rem; position: relative; z-index: 10;">
+        <div class="alert alert-warning"><div class="alert-icon">⚠️</div><div class="alert-content"><h4>Important Advisory</h4><p>Our services are <strong>FREE</strong>. We will NEVER ask for payment upfront or guarantee recovery. Beware of fake recovery services that demand fees.</p></div></div>
     </div>
     <section class="services" id="services">
-        <div class="section-header"><h2>Our Services</h2><p>Comprehensive support for cryptocurrency crime victims</p></div>
-        <div class="services-grid">
-            <div class="service-card"><div class="service-icon">🔍</div><h3>Blockchain Investigation</h3><p>Our expert investigators trace stolen funds across blockchain networks using advanced forensic tools.</p><ul><li>Transaction tracing</li><li>Wallet identification</li><li>Exchange coordination</li><li>Evidence collection</li></ul></div>
-            <div class="service-card"><div class="service-icon">💰</div><h3>Asset Recovery</h3><p>Working with international law enforcement to freeze and recover stolen cryptocurrency assets.</p><ul><li>Asset freezing orders</li><li>Legal coordination</li><li>Exchange liaison</li><li>Recovery negotiation</li></ul></div>
-            <div class="service-card"><div class="service-icon">📊</div><h3>Case Management</h3><p>Dedicated case managers guide you through the recovery process with regular updates.</p><ul><li>Personal case manager</li><li>Regular progress updates</li><li>Document coordination</li><li>Emotional support</li></ul></div>
-            <div class="service-card"><div class="service-icon">⚖️</div><h3>Legal Support</h3><p>Connect with specialized attorneys and coordinate with law enforcement agencies.</p><ul><li>Legal referrals</li><li>Law enforcement coordination</li><li>International cooperation</li><li>Court testimony</li></ul></div>
-            <div class="service-card"><div class="service-icon">🛡️</div><h3>Security Assessment</h3><p>Evaluate your security posture and prevent future incidents.</p><ul><li>Wallet security audit</li><li>Phishing assessment</li><li>Best practices guidance</li><li>Monitoring services</li></ul></div>
-            <div class="service-card"><div class="service-icon">📚</div><h3>Education & Prevention</h3><p>Learn how to protect yourself from cryptocurrency crimes.</p><ul><li>Security workshops</li><li>Scam awareness training</li><li>Resource library</li><li>Community alerts</li></ul></div>
+        <div class="container">
+            <div class="section-header"><h2>Our Services</h2><p>Comprehensive solutions for cryptocurrency crime victims</p></div>
+            <div class="services-grid">
+                <article class="service-card"><div class="service-icon">🔍</div><h3>Blockchain Forensics</h3><p>Our expert investigators trace stolen funds across blockchain networks using advanced forensic tools.</p><ul><li>Transaction tracing</li><li>Wallet identification</li><li>Exchange coordination</li><li>Evidence preservation</li></ul></article>
+                <article class="service-card"><div class="service-icon">💰</div><h3>Asset Recovery</h3><p>We work with exchanges and law enforcement worldwide to freeze and recover stolen cryptocurrency.</p><ul><li>Freeze requests</li><li>Legal coordination</li><li>Asset seizure orders</li><li>Restitution assistance</li></ul></article>
+                <article class="service-card"><div class="service-icon">🛡️</div><h3>Wallet Security</h3><p>We help secure your remaining assets and implement protective measures against future attacks.</p><ul><li>Security assessment</li><li>Hardware wallet setup</li><li>Multi-signature guidance</li><li>Protection protocols</li></ul></article>
+                <article class="service-card"><div class="service-icon">📋</div><h3>Case Management</h3><p>Full-service case handling from initial report through resolution and restitution.</p><ul><li>Dedicated case officer</li><li>Regular updates</li><li>Progress tracking</li><li>Victim support</li></ul></article>
+                <article class="service-card"><div class="service-icon">🌐</div><h3>International Cooperation</h3><p>Cross-border collaboration with international law enforcement agencies and exchanges.</p><ul><li>INTERPOL coordination</li><li>Foreign exchange requests</li><li>Mutual legal assistance</li><li>Global network</li></ul></article>
+                <article class="service-card"><div class="service-icon">📚</div><h3>Education & Prevention</h3><p>We provide resources to help you understand and prevent cryptocurrency crimes.</p><ul><li>Security guides</li><li>Scam awareness</li><li>Best practices</li><li>Community workshops</li></ul></article>
+            </div>
+        </div>
+    </section>
+    <section class="process">
+        <div class="container">
+            <div class="section-header"><h2>How It Works</h2><p>Our streamlined process to help you recover your assets</p></div>
+            <div class="steps">
+                <div class="step"><div class="step-number">1</div><h3>Submit Report</h3><p>File a detailed report with all transaction details, wallet addresses, and evidence of the crime.</p></div>
+                <div class="step"><div class="step-number">2</div><h3>Case Assignment</h3><p>Your case is assigned to a dedicated investigator who specializes in your type of cryptocurrency crime.</p></div>
+                <div class="step"><div class="step-number">3</div><h3>Investigation</h3><p>We conduct blockchain analysis, coordinate with exchanges, and work with law enforcement.</p></div>
+                <div class="step"><div class="step-number">4</div><h3>Recovery Action</h3><p>Funds are traced, accounts frozen, and recovery procedures initiated where possible.</p></div>
+                <div class="step"><div class="step-number">5</div><h3>Resolution</h3><p>You receive a final report with outcomes and restitution guidance if recovery is successful.</p></div>
+            </div>
         </div>
     </section>
     <section class="report-section" id="report">
-        <div class="section-header"><h2>Report a Cryptocurrency Crime</h2><p>Submit your case for investigation. All information is confidential.</p></div>
-        <div class="report-container">
-            <div class="report-header"><h2>📋 Crime Report Form</h2><p>Please provide as much detail as possible to help our investigation</p></div>
-            <form class="report-form" onsubmit="handleSubmit(event)">
-                <div class="alert-banner"><h4>⚠️ Important Notice</h4><p>For immediate assistance with active theft, call our emergency line at 1-800-CRYPTO-HELP. Do not transfer any additional funds to addresses provided by unknown parties.</p></div>
-                <div class="form-grid">
-                    <div class="form-group"><label>Full Name <span class="required">*</span></label><input type="text" name="fullName" required placeholder="Your full legal name"></div>
-                    <div class="form-group"><label>Email Address <span class="required">*</span></label><input type="email" name="email" required placeholder="your@email.com"></div>
-                    <div class="form-group"><label>Phone Number <span class="required">*</span></label><input type="tel" name="phone" required placeholder="+1 (555) 000-0000"></div>
-                    <div class="form-group"><label>Date of Incident <span class="required">*</span></label><input type="date" name="incidentDate" required></div>
+        <div class="container">
+            <div class="report-box">
+                <div class="report-header"><h2>📝 Report Cryptocurrency Crime</h2><p>Complete the form below to report a cryptocurrency scam, hack, or theft</p></div>
+                <div class="report-form">
+                    <div class="alert alert-danger"><div class="alert-icon">⚠️</div><div class="alert-content"><h4>File a Report Immediately</h4><p>Time is critical. The sooner you report, the higher the chance of recovering your funds. Do not delay.</p></div></div>
+                    <form id="crime-report-form" onsubmit="handleReport(event)">
+                        <div class="form-grid">
+                            <div class="form-group"><label for="fullName">Full Name <span class="required">*</span></label><input type="text" id="fullName" name="fullName" required></div>
+                            <div class="form-group"><label for="email">Email Address <span class="required">*</span></label><input type="email" id="email" name="email" required></div>
+                            <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone"></div>
+                            <div class="form-group"><label for="caseType">Type of Crime <span class="required">*</span></label><select id="caseType" name="caseType" required><option value="">Select type...</option><option value="scam">Investment Scam</option><option value="hack">Exchange Hack</option><option value="theft">Wallet Theft</option><option value="phishing">Phishing Attack</option><option value="rugpull">Rug Pull / DeFi Scam</option><option value="ponzi">Ponzi Scheme</option><option value="other">Other</option></select></div>
+                            <div class="form-group"><label for="amountLost">Amount Lost (USD) <span class="required">*</span></label><input type="number" id="amountLost" name="amountLost" min="1" required></div>
+                            <div class="form-group"><label for="cryptoType">Cryptocurrency Type</label><select id="cryptoType" name="cryptoType"><option value="">Select...</option><option value="btc">Bitcoin (BTC)</option><option value="eth">Ethereum (ETH)</option><option value="usdt">Tether (USDT)</option><option value="sol">Solana (SOL)</option><option value="other">Other</option></select></div>
+                            <div class="form-group"><label for="walletAddress">Your Wallet Address</label><input type="text" id="walletAddress" name="walletAddress" placeholder="0x..." style="font-family: var(--font-mono);"></div>
+                            <div class="form-group"><label for="incidentDate">Date of Incident <span class="required">*</span></label><input type="date" id="incidentDate" name="incidentDate" required></div>
+                            <div class="form-group full-width"><label for="incidentDetails">Detailed Description <span class="required">*</span></label><textarea id="incidentDetails" name="incidentDetails" required placeholder="Describe what happened in detail. Include all relevant information such as:&#10;- How you were contacted&#10;- Names of individuals or platforms involved&#10;- Any promises made&#10;- What actions you took&#10;- All wallet addresses and transaction hashes"></textarea><div class="form-help">Please provide as much detail as possible.</div></div>
+                            <div class="form-group full-width"><label for="suspectInfo">Suspect Information</label><textarea id="suspectInfo" name="suspectInfo" placeholder="Provide any information about suspects:&#10;- Website URLs&#10;- Social media profiles&#10;- Email addresses&#10;- Phone numbers"></textarea></div>
+                        </div>
+                        <div class="form-submit"><button type="submit" class="btn btn-danger btn-lg">Submit Crime Report</button></div>
+                    </form>
                 </div>
-                <div class="form-grid">
-                    <div class="form-group"><label>Type of Crime <span class="required">*</span></label><select name="crimeType" required><option value="">Select type...</option><option value="hack">Cryptocurrency Hack</option><option value="scam">Investment Scam</option><option value="phishing">Phishing Attack</option><option value="rugpull">Rug Pull</option><option value="exchange">Exchange Hack</option><option value="wallet">Wallet Compromise</option><option value="other">Other</option></select></div>
-                    <div class="form-group"><label>Cryptocurrency Type</label><select name="cryptoType"><option value="">Select...</option><option value="bitcoin">Bitcoin (BTC)</option><option value="ethereum">Ethereum (ETH)</option><option value="solana">Solana (SOL)</option><option value="ripple">XRP</option><option value="cardano">Cardano (ADA)</option><option value="other">Other</option></select></div>
-                </div>
-                <div class="form-grid">
-                    <div class="form-group"><label>Amount Lost (USD) <span class="required">*</span></label><input type="number" name="amountLost" required min="1" placeholder="Enter amount in USD"></div>
-                    <div class="form-group"><label>Transaction Hash</label><input type="text" name="txHash" placeholder="e.g., 0x..."></div>
-                </div>
-                <div class="form-group"><label>Wallet Address Involved</label><input type="text" name="walletAddress" placeholder="Your wallet or scammer's address"></div>
-                <div class="form-group"><label>Detailed Description <span class="required">*</span></label><textarea name="description" required placeholder="Describe what happened in detail..."></textarea></div>
-                <div class="form-group"><label><input type="checkbox" required> I confirm that the information provided is accurate.</label></div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;"><span>📨</span> Submit Report</button>
-            </form>
+            </div>
         </div>
     </section>
-    <section class="process-section" id="process">
-        <h2>How the Recovery Process Works</h2>
-        <div class="process-grid">
-            <div class="process-step"><div class="step-number">1</div><h3>Submit Report</h3><p>Fill out our comprehensive crime report form.</p></div>
-            <div class="process-step"><div class="step-number">2</div><h3>Case Assignment</h3><p>Your case is assigned to a dedicated investigator within 24 hours.</p></div>
-            <div class="process-step"><div class="step-number">3</div><h3>Investigation</h3><p>We trace transactions and coordinate with exchanges.</p></div>
-            <div class="process-step"><div class="step-number">4</div><h3>Recovery Action</h3><p>We work with law enforcement to freeze and recover assets.</p></div>
-            <div class="process-step"><div class="step-number">5</div><h3>Resolution</h3><p>You receive a final report with outcomes.</p></div>
+    <section class="statistics">
+        <div class="container">
+            <div class="section-header" style="color: white;"><h2 style="color: white;">Our Impact</h2><p style="opacity: 0.9;">Making a difference in the fight against cryptocurrency crime</p></div>
+            <div class="stats-grid">
+                <div class="stat-item"><div class="stat-number">$4.2B+</div><div class="stat-label">Total Recovered</div></div>
+                <div class="stat-item"><div class="stat-number">15,847</div><div class="stat-label">Cases Resolved</div></div>
+                <div class="stat-item"><div class="stat-number">89%</div><div class="stat-label">Success Rate</div></div>
+                <div class="stat-item"><div class="stat-number">342</div><div class="stat-label">Criminal Referrals</div></div>
+            </div>
         </div>
     </section>
     <section class="resources" id="resources">
-        <div class="section-header"><h2>Resources</h2><p>Helpful information for victims and prevention</p></div>
-        <div class="resources-grid">
-            <div class="resource-card"><h3>📖 Educational Materials</h3><ul><li><a href="#">How to Secure Your Wallet</a></li><li><a href="#">Recognizing Scams</a></li><li><a href="#">2FA Guide</a></li><li><a href="#">Cold Storage Best Practices</a></li></ul></div>
-            <div class="resource-card"><h3>🔗 Partner Organizations</h3><ul><li><a href="#">FBI Cyber Division</a></li><li><a href="#">SEC Crypto Crimes Unit</a></li><li><a href="#">Interpol Cyber Crimes</a></li><li><a href="#">IC3 Internet Crime Center</a></li></ul></div>
-            <div class="resource-card"><h3>🛠️ Security Tools</h3><ul><li><a href="#">Wallet Scanner</a></li><li><a href="#">Address Checker</a></li><li><a href="#">Scam Database</a></li><li><a href="#">Report Phishing</a></li></ul></div>
+        <div class="container">
+            <div class="section-header"><h2>Resources</h2><p>Educational materials to help you stay safe</p></div>
+            <div class="resources-grid">
+                <article class="resource-card"><div class="resource-image">🔐</div><div class="resource-content"><span class="resource-tag">Guide</span><h3>Wallet Security Guide</h3><p>Learn how to secure your cryptocurrency holdings with best practices.</p><a href="#">Read More →</a></div></article>
+                <article class="resource-card"><div class="resource-image">🚨</div><div class="resource-content"><span class="resource-tag">Warning</span><h3>Common Scam Types</h3><p>Recognize the most prevalent cryptocurrency scams and how to avoid them.</p><a href="#">Read More →</a></div></article>
+                <article class="resource-card"><div class="resource-image">📱</div><div class="resource-content"><span class="resource-tag">Checklist</span><h3>Before You Invest</h3><p>Essential checklist to verify legitimacy before investing in any crypto project.</p><a href="#">Read More →</a></div></article>
+            </div>
         </div>
     </section>
-    <footer id="contact">
-        <div class="footer-content">
-            <div><div class="footer-seal">🏛️</div><h4>CryptoCrime Bureau</h4><p>The official government agency for cryptocurrency crime prevention and victim support.</p></div>
-            <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#report">Report Crime</a><a href="#resources">Resources</a></div>
-            <div><h4>Contact Us</h4><p>📞 Emergency: 1-800-CRYPTO-HELP</p><p>📧 Email: help@cryptocrimebureau.gov</p><p>🌐 Web: www.cryptocrimebureau.gov</p></div>
-            <div><h4>Hours</h4><p>Monday - Friday: 8:00 AM - 8:00 PM</p><p>Saturday: 9:00 AM - 5:00 PM</p><p>Sunday: Emergency Only</p></div>
+    <section class="contact" id="tracking">
+        <div class="container">
+            <div class="section-header"><h2>Track Your Case</h2><p>Check the status of your submitted report</p></div>
+            <div class="report-box" style="max-width: 600px; margin: 0 auto;">
+                <div class="report-form">
+                    <div class="form-group"><label for="caseNumber">Case Number</label><input type="text" id="caseNumber" placeholder="CCR-2026-XXXXX"></div>
+                    <div class="form-group"><label for="trackingEmail">Email Used in Report</label><input type="email" id="trackingEmail"></div>
+                    <div class="form-submit"><button class="btn btn-primary" onclick="trackCase()">Check Status</button></div>
+                </div>
+            </div>
         </div>
-        <div class="footer-bottom"><p>© 2026 CryptoCrime Bureau | Official Government Agency | All Rights Reserved</p><p>This is an official website of the United States Government.</p></div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header"><h2>Contact Us</h2><p>Multiple ways to reach our agency</p></div>
+            <div class="contact-grid">
+                <div class="contact-card"><div class="contact-icon">📞</div><h3>24/7 Hotline</h3><p>1-800-CRYPTO-HELP<br>(1-800-279-7463)</p><a href="tel:18002799683">Call Now</a></div>
+                <div class="contact-card"><div class="contact-icon">📧</div><h3>Email</h3><p>recovery@cryptocrimerecovery.gov<br>Response within 24 hours</p><a href="mailto:recovery@cryptocrimerecovery.gov">Send Email</a></div>
+                <div class="contact-card"><div class="contact-icon">🏢</div><h3>Office</h3><p>Washington, D.C.<br>Federal Building Complex</p><a href="#">Get Directions</a></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col"><h4>CryptoCrimeRecovery.gov</h4><p>The Bureau of Cryptocurrency Crime Investigation is a federal agency dedicated to protecting cryptocurrency users and investigating digital asset crimes.</p><div class="official-badge"><span>✓</span><span>Official Government Agency</span></div></div>
+                <div class="footer-col"><h4>Quick Links</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#report">Report Crime</a><a href="#resources">Resources</a><a href="#tracking">Track Case</a></div>
+                <div class="footer-col"><h4>Resources</h4><a href="#">Security Guides</a><a href="#">Scam Alerts</a><a href="#">FAQ</a><a href="#">Press Room</a><a href="#">Careers</a></div>
+                <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">FOIA</a><a href="#">Accessibility</a><a href="#">Disclaimer</a></div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 CryptoCrimeRecovery.gov | Bureau of Cryptocurrency Crime Investigation</p><p>This is an official United States Government website.</p><p>🇺🇸 United States Department of the Treasury</p></div>
+        </div>
     </footer>
     <script>
-        function handleSubmit(e) { e.preventDefault(); alert('Thank you for your report. A case manager will contact you within 24 hours. Reference: CCB-' + Math.random().toString(36).substr(2, 9).toUpperCase()); e.target.reset(); }
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); });
+        function handleReport(e) { e.preventDefault(); const form = e.target; const submitBtn = form.querySelector('button[type="submit"]'); submitBtn.disabled = true; submitBtn.textContent = 'Submitting Report...'; setTimeout(() => { const caseNumber = 'CCR-2026-' + Math.random().toString(36).substr(2, 6).toUpperCase(); alert('✅ Report Submitted Successfully!\n\nYour Case Number: ' + caseNumber + '\n\nPlease save this number for tracking.\n\nRemember: Our services are FREE.'); form.reset(); submitBtn.disabled = false; submitBtn.textContent = 'Submit Crime Report'; }, 1500); }
+        function trackCase() { const caseNum = document.getElementById('caseNumber').value; const email = document.getElementById('trackingEmail').value; if (!caseNum || !email) { alert('Please enter both case number and email.'); return; } alert('Case Status: UNDER INVESTIGATION\n\nCase Number: ' + caseNum + '\nStatus: Active - Being Reviewed\n\nA case officer will contact you within 48 hours.'); }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) target.scrollIntoView({ behavior: 'smooth' }); }); });
+        const sections = document.querySelectorAll('section[id]'); const navLinks = document.querySelectorAll('nav a'); window.addEventListener('scroll', () => { let current = ''; sections.forEach(section => { const sectionTop = section.offsetTop; if (pageYOffset >= sectionTop - 200) current = section.getAttribute('id'); }); navLinks.forEach(link => { link.classList.remove('active'); if (link.getAttribute('href') === '#' + current) link.classList.add('active'); }); });
     </script>
 </body>
 </html>
