@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
-        :root { --primary: #ff6b35; --primary-dark: #e55a2b; --primary-light: #ff8c5a; --secondary: #1a1a2e; --accent: #00d4aa; --dark: #0f0f1a; --light: #f8f9fc; --gray: #6b7280; --border: rgba(255, 255, 255, 0.1); }
+        :root { --primary: #ff6b35; --primary-dark: #e55a2b; --primary-light: #ff8c5a; --secondary: #1a1a2e; --accent: #00d4aa; --accent-blue: #3b82f6; --dark: #0f0f1a; --light: #f8f9fc; --gray: #6b7280; --border: rgba(255, 255, 255, 0.1); }
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--light); line-height: 1.6; overflow-x: hidden; }
@@ -35,8 +35,10 @@
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(255, 107, 53, 0.4); }
         .btn-secondary { background: rgba(255, 255, 255, 0.1); color: var(--light); border: 1px solid var(--border); }
         .btn-secondary:hover { background: rgba(255, 255, 255, 0.15); }
+        .btn-accent { background: linear-gradient(135deg, var(--accent), #00b894); color: white; }
+        .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(0, 212, 170, 0.4); }
         .hero { padding: 180px 0 100px; text-align: center; position: relative; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255, 107, 53, 0.1); border: 1px solid rgba(255, 107, 53, 0.3); padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.85rem; color: var(--primary); margin-bottom: 2rem; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 212, 170, 0.1); border: 1px solid rgba(0, 212, 170, 0.3); padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.85rem; color: var(--accent); margin-bottom: 2rem; }
         .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; background: linear-gradient(135deg, var(--light), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 1.25rem; color: var(--gray); max-width: 600px; margin: 0 auto 2.5rem; }
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -70,16 +72,21 @@
         .step h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
         .step p { color: var(--gray); font-size: 0.95rem; }
         .pricing { padding: 100px 0; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto; }
-        .pricing-card { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; text-align: center; transition: 0.3s; }
-        .pricing-card.featured { border-color: var(--primary); background: rgba(255, 107, 53, 0.05); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto; }
+        .pricing-card { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; text-align: center; transition: 0.3s; position: relative; overflow: hidden; }
+        .pricing-card.featured { border-color: var(--accent); background: rgba(0, 212, 170, 0.05); }
         .pricing-card:hover { transform: translateY(-5px); }
+        .pricing-badge { position: absolute; top: 20px; right: -35px; background: var(--accent); color: white; padding: 5px 40px; font-size: 0.75rem; font-weight: 700; transform: rotate(45deg); }
         .pricing-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
         .price { font-size: 3rem; font-weight: 800; margin: 1rem 0; }
         .price span { font-size: 1rem; color: var(--gray); font-weight: 400; }
+        .price .free { color: var(--accent); font-size: 1.5rem; }
         .pricing-card ul { list-style: none; margin: 1.5rem 0; text-align: left; }
         .pricing-card li { padding: 0.5rem 0; color: var(--gray); }
         .pricing-card li::before { content: '✓'; color: var(--accent); margin-right: 0.75rem; font-weight: bold; }
+        .ownership-banner { background: linear-gradient(135deg, rgba(0, 212, 170, 0.15), rgba(59, 130, 246, 0.15)); border: 1px solid var(--accent); border-radius: 12px; padding: 1.5rem; margin: 2rem auto; max-width: 700px; text-align: center; }
+        .ownership-banner h3 { color: var(--accent); margin-bottom: 0.5rem; }
+        .ownership-banner p { color: var(--light); font-size: 1rem; }
         .cta { padding: 100px 0; text-align: center; }
         .cta h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
         .cta p { color: var(--gray); font-size: 1.1rem; margin-bottom: 2rem; }
@@ -108,7 +115,7 @@
             <h1>Launch Your Bot Instantly</h1>
             <p>Launch your Telegram bot instantly — no servers, no setup, no stress. We handle the backend so you can focus on creating.</p>
             <div class="hero-buttons">
-                <a href="#pricing" class="btn btn-primary">Start Free</a>
+                <a href="#pricing" class="btn btn-accent">Get Started Free</a>
                 <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
             </div>
             <div class="code-preview">
@@ -156,19 +163,29 @@
     </section>
     <section class="pricing" id="pricing">
         <div class="container">
-            <div class="section-header"><h2>Simple Pricing</h2><p>Start free, scale as you grow</p></div>
+            <div class="section-header"><h2>Free Access for All</h2><p>Under ownership model — everyone gets unlimited access</p></div>
+            
+            <div class="ownership-banner">
+                <h3>🎉 100% Free for Everyone</h3>
+                <p>Under our ownership model, all features and unlimited usage are completely free. No credit card, no limits, no paywall.</p>
+            </div>
+            
             <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$0<span>/month</span></div>
-                    <ul><li>1 Bot</li><li>1,000 messages/month</li><li>Basic analytics</li><li>Community support</li></ul>
-                    <a href="#" class="btn btn-secondary" style="width: 100%; justify-content: center;">Start Free</a>
-                </div>
                 <div class="pricing-card featured">
-                    <h3>Pro</h3>
-                    <div class="price">$19<span>/month</span></div>
-                    <ul><li>5 Bots</li><li>100,000 messages/month</li><li>Advanced analytics</li><li>Priority support</li><li>Custom domain</li></ul>
-                    <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">Get Pro</a>
+                    <span class="pricing-badge">UNLIMITED</span>
+                    <h3>OpenClaw Free</h3>
+                    <div class="price"><span class="free">FREE</span></div>
+                    <ul>
+                        <li>Unlimited Bots</li>
+                        <li>Unlimited Messages</li>
+                        <li>All Features Unlocked</li>
+                        <li>Priority Support</li>
+                        <li>Custom Domains</li>
+                        <li>Advanced Analytics</li>
+                        <li>API Access</li>
+                        <li>White-label Options</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-accent" style="width: 100%; justify-content: center;">Start Using Free</a>
                 </div>
             </div>
         </div>
@@ -176,8 +193,8 @@
     <section class="cta" id="contact">
         <div class="container">
             <h2>Ready to Launch?</h2>
-            <p>Start building your Telegram bot today. No credit card required.</p>
-            <a href="#" class="btn btn-primary">Get Started Free</a>
+            <p>Start building your Telegram bot today. Completely free — no credit card required.</p>
+            <a href="#" class="btn btn-accent">Get Started Free</a>
         </div>
     </section>
     <footer>
